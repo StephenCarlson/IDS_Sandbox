@@ -47,7 +47,7 @@ freq = 10
 f, Pxx_den_gyro_y  = signal.periodogram(dataframe["IMU[0].GyrY"], freq)
 f, Pxx_den_accel_z = signal.periodogram(dataframe["IMU[0].AccZ"], freq)
 # f, Pxx_spec = signal.periodogram(dataframe["IMU[0].GyrY"], freq, 'blackmanharris', scaling='spectrum')
-plt.semilogy(f, Pxx_den_gyro_y,  label='Gyro Y deg/s (Roll)')
+plt.semilogy(f, Pxx_den_gyro_y,  label='Gyro Y deg/s (Pitch)')
 plt.semilogy(f, Pxx_den_accel_z, label='Accel Z m/s^2 (Surge)')
 # plt.semilogy(f, Pxx_spec)
 plt.ylim([1e-5, 1e1])
